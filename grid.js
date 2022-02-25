@@ -49,7 +49,7 @@ class Grid {
         }
         return true;
     }
-
+    // move by 1
     move() {
         if (this.canMove()) {
             switch (this.face) {
@@ -69,6 +69,7 @@ class Grid {
         }
     }
 
+    //turn left
     left() {
         if (this.face === "EAST") {
             return this.face = "NORTH";
@@ -77,6 +78,7 @@ class Grid {
             return this.face = this.direction[idx + 1];
         }
     }
+    // turn right
     right() {
         if (this.face === "NORTH") {
             return this.face = "EAST";
@@ -88,9 +90,10 @@ class Grid {
     canShowReprot() {
         return this.positionX !== null && this.positionY !== null && this.face !== null
     }
+    //reports current position of pacman
     report() {
         if (this.canShowReprot()) {
-            return `${this.positionX},${this.positionY},${this.face}`;
+            return `OUTPUT: ${this.positionX},${this.positionY},${this.face}`;
         }
 
     }

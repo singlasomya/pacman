@@ -19,7 +19,7 @@ rl.setPrompt('Enter Your Command:');
 rl.prompt();
 
 rl.on('line', (line) => {
-    let [command, coordinates] = line.trim().split(" ")
+    let [command, coordinates] = line.trim().split(" ");
     switch (command) {
         case "PLACE":
             if (coordinates) {
@@ -39,7 +39,7 @@ rl.on('line', (line) => {
         case "REPORT":
             let result = gridBoard.report()
             if (result) {
-                console.log(result)
+                console.log(result);
             }
             break;
         case "Q":
