@@ -1,0 +1,18 @@
+{
+  "name": "pacman",
+  "version": "1.0.0",
+  "description": "pacman simulator",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.1"
+  }
+}
