@@ -44,10 +44,10 @@ it("should pacman should be put in grid", () => {
     gameBoard.createGrid();
 
     gameBoard.place(0, 0, "north");
-    assert.equal(gameBoard.report(), "0,0,NORTH");
+    assert.equal(gameBoard.report(), "Output: 0,0,NORTH");
 
     gameBoard.place(4, 5, "east");
-    assert.equal(gameBoard.report(), "4,5,EAST");
+    assert.equal(gameBoard.report(), "Output: 4,5,EAST");
 });
 
 it("check pacman can move", () => {
@@ -67,35 +67,35 @@ it("should pacman move", () => {
 
     gameBoard.place(0, 0, "NORTH");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "0,1,NORTH");
+    assert.equal(gameBoard.report(), "Output: 0,1,NORTH");
 
     gameBoard.place(3, 1, "NORTH");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "3,2,NORTH");
+    assert.equal(gameBoard.report(), "Output: 3,2,NORTH");
 
     gameBoard.place(3, 5, "NORTH");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "3,5,NORTH");
+    assert.equal(gameBoard.report(), "Output: 3,5,NORTH");
 
     gameBoard.place(0, 0, "SOUTH");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "0,0,SOUTH");
+    assert.equal(gameBoard.report(), "Output: 0,0,SOUTH");
 
     gameBoard.place(0, 1, "SOUTH");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "0,0,SOUTH");
+    assert.equal(gameBoard.report(), "Output: 0,0,SOUTH");
 
     gameBoard.place(1, 3, "SOUTH");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "1,2,SOUTH");
+    assert.equal(gameBoard.report(), "Output: 1,2,SOUTH");
 
     gameBoard.place(1, 1, "EAST");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "2,1,EAST");
+    assert.equal(gameBoard.report(), "Output: 2,1,EAST");
 
     gameBoard.place(2, 1, "WEST");
     gameBoard.move();
-    assert.equal(gameBoard.report(), "1,1,WEST");
+    assert.equal(gameBoard.report(), "Output: 1,1,WEST");
 });
 
 it("can rotate left", () => {
@@ -104,11 +104,11 @@ it("can rotate left", () => {
 
     gameBoard.place(0, 0, "NORTH");
     gameBoard.left();
-    assert.equal(gameBoard.report(), "0,0,WEST");
+    assert.equal(gameBoard.report(), "Output: 0,0,WEST");
 
     gameBoard.place(3, 1, "south");
     gameBoard.left();
-    assert.equal(gameBoard.report(), "3,1,EAST");
+    assert.equal(gameBoard.report(), "Output: 3,1,EAST");
 });
 
 it("can rotate rigth", () => {
@@ -117,11 +117,11 @@ it("can rotate rigth", () => {
 
     gameBoard.place(0, 0, "NORTH");
     gameBoard.right();
-    assert.equal(gameBoard.report(), "0,0,EAST");
+    assert.equal(gameBoard.report(), "Output: 0,0,EAST");
 
     gameBoard.place(3, 1, "south");
     gameBoard.right();
-    assert.equal(gameBoard.report(), "3,1,WEST");
+    assert.equal(gameBoard.report(), "Output: 3,1,WEST");
 });
 
 it("can move and rotate", () => {
@@ -133,5 +133,5 @@ it("can move and rotate", () => {
     gameBoard.move();
     gameBoard.left();
     gameBoard.move();
-    assert.equal(gameBoard.report(), "3,3,NORTH");
+    assert.equal(gameBoard.report(), "Output: 3,3,NORTH");
 });

@@ -93,7 +93,7 @@ class Grid {
     //reports current position of pacman
     report() {
         if (this.canShowReprot()) {
-            return `OUTPUT: ${this.positionX},${this.positionY},${this.face}`;
+            return `Output: ${this.positionX},${this.positionY},${this.face}`;
         }
 
     }
