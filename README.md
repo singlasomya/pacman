@@ -1,16 +1,16 @@
 # pacman
 simulation of Pacman moving on in a grid
 
-Install Required Files
+# Install Required Files
 npm install
 
-Run Application
+# Run Application
 npm start
 
-Testing
+# Testing
 npm test
 
-Commands
+# Commands
 Q, PLACE, MOVE, LEFT, RIGHT or REPORT 
 
 
